@@ -14,7 +14,7 @@ target_link_options(${target_name} PRIVATE -Xlinker --print-memory-usage)
 target_compile_options(${target_name} PRIVATE -Wall -Wextra)
 
 # use tinyusb implementation
-target_compile_definitions(${target_name} PRIVATE PIO_USB_USE_TINYUSB)
+target_compile_definitions(${target_name} PRIVATE PIO_USB_USE_TINYUSB PIO_USB_DP_PIN_DEFAULT=32 PICO_PIO_USE_GPIO_BASE=1)
 
 # needed so tinyusb can find tusb_config.h
 target_include_directories(${target_name} PRIVATE ${CMAKE_CURRENT_LIST_DIR})
