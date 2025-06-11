@@ -15,7 +15,7 @@ target_compile_options(${target_name} PRIVATE -Wall -Wextra)
 
 # use tinyusb implementation
 # Adafruit Metro RP2350 using built-in USB with D+ GPIO32, D- GPIO33 : not working
-target_compile_definitions(${target_name} PRIVATE PIO_USB_USE_TINYUSB PIO_USB_DP_PIN_DEFAULT=32 PICO_PIO_USE_GPIO_BASE=1)
+target_compile_definitions(${target_name} PRIVATE PIO_USB_USE_TINYUSB PIO_USB_DP_PIN_DEFAULT=32 PICO_PIO_USE_GPIO_BASE=1 PICO_DEFAULT_PIO_USB_DP_PIN=29 PICO_DEFAULT_PIO_USB_VBUSEN_STATE=1)
 #  Adafruit Metro RP2350 with External USB port on D+ GPIO 4, D- GPIO5 : working
 #target_compile_definitions(${target_name} PRIVATE PIO_USB_USE_TINYUSB PIO_USB_DP_PIN_DEFAULT=4)
 # needed so tinyusb can find tusb_config.h
