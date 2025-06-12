@@ -93,9 +93,9 @@ int main(void) {
   sleep_ms(10);
 
   // Enable 5v power on USB port
-  // gpio_put(29, 1);
-  // gpio_set_dir(29, GPIO_OUT);
-  // gpio_set_function(29, GPIO_FUNC_SIO);
+  gpio_put(29, 1);
+  gpio_set_dir(29, GPIO_OUT);
+  gpio_set_function(29, GPIO_FUNC_SIO);
   // sleep_ms(1000);
 
   multicore_reset_core1();
