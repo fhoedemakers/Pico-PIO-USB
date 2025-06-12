@@ -96,7 +96,7 @@ int main(void) {
   gpio_put(29, 1);
   gpio_set_dir(29, GPIO_OUT);
   gpio_set_function(29, GPIO_FUNC_SIO);
-  // sleep_ms(1000);
+  sleep_ms(1000);
 
   multicore_reset_core1();
   // all USB task run in core1
